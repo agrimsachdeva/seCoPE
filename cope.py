@@ -60,19 +60,25 @@ class CoPE(nn.Module):
         n = len(users)
         yu = torch.cat([yu, self.user_states], 1)
         yi = torch.cat([yi, self.item_states], 1)
+
         # positive
         pos_u = F.embedding(users, yu, max_norm=mn)
         pos_i = F.embedding(items, yi, max_norm=mn)
         pos_scores = self.compute_matched_scores(pos_u, pos_i)
+
         # negative
         neg_u_ids = torch.randint(0, self.n_users, size=[self.n_neg_samples//2], device=users.device)
         neg_i_ids = torch.randint(0, self.n_items, size=[self.n_neg_samples//2], device=items.device)
+        
         neg_u = F.embedding(neg_u_ids, yu, max_norm=mn)
         neg_i = F.embedding(neg_i_ids, yi, max_norm=mn)
+
         u_neg_scores = self.compute_pairwise_scores(pos_u, neg_i)
         i_neg_scores = self.compute_pairwise_scores(neg_u, pos_i)
+
         neg_scores = torch.cat([u_neg_scores, i_neg_scores.T], 1)
         scores = torch.cat([pos_scores.unsqueeze(1), neg_scores], 1)
+
         logps = F.log_softmax(scores, 1)
         loss = -logps[:, 0].mean()
         return loss
@@ -96,6 +102,7 @@ class PropagateUnit(nn.Module):
         self.gnn = ACGNN(10, 2, self.n_users + self.n_items, True)
     
     def forward(self, adj, dt, xu, xi, static_u, static_i):
+        print('in propagate unit FORWARD')
         last_state = torch.cat([xu, xi], 0)
         init_state = torch.cat([static_u, static_i], 0)
         norm = torch.norm(last_state, dim=1).max()
@@ -103,6 +110,9 @@ class PropagateUnit(nn.Module):
         init_state = init_state / norm
         z = self.gnn(adj, init_state, last_state, dt)
         yu, yi = torch.split(z, [self.n_users, self.n_items], 0)
+        print('yu', yu.shape)
+        print('yi', yi.shape)
+        print('out propagate unit FORWARD')
         return yu, yi
 
 
@@ -122,7 +132,9 @@ class UpdateUnit(nn.Module):
         # i2u_prop_mat: [m, n]
         # act_fn = torch.tanh
         act_fn = F.relu
-        delta_u = act_fn(self.uu_mapping(user_embs) + i2u_prop_mat @ self.iu_mapping(item_embs))
+        # delta_u = act_fn(self.uu_mapping(user_embs) + i2u_prop_mat @ self.iu_mapping(item_embs))
+        delta_u = act_fn(self.uu_mapping(user_embs) + i2u_prop_mat @ self.iu_mapping(item_embs) ) 
+        # use severity level  
         delta_i = act_fn(self.ii_mapping(item_embs) + u2i_prop_mat @ self.ui_mapping(user_embs))
         u_mask = (torch.sparse.sum(i2u_prop_mat, 1).to_dense() > 0).float()
         i_mask = (torch.sparse.sum(u2i_prop_mat, 1).to_dense() > 0).float()

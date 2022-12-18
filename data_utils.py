@@ -3,6 +3,8 @@ import pandas as pd
 
 
 def check_dataframe(df):
+    print(df.iloc[:, 0].max())
+    print(df.iloc[:, 0].nunique())
     assert df.iloc[:, 0].max() + 1 == df.iloc[:, 0].nunique()
     assert df.iloc[:, 1].max() + 1 == df.iloc[:, 1].nunique()
     assert (df.iloc[:, 2].diff().iloc[1:] >= 0).all()
