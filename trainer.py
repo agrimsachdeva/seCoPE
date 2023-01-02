@@ -15,23 +15,23 @@ from sklearn.metrics import *
 
 def train_one_epoch(model, optimizer, train_dl, delta_coef=1e-5, tbptt_len=20,
                     valid_dl=None, test_dl=None, fast_eval=True, adaptation=False, adaptation_lr=1e-4):
-    print("train one epoch parameters") 
-    print("model", model)
-    print("optimizer", optimizer)
-    print("train_dl", train_dl)
-    print("delta_coef", delta_coef)
-    print("tbptt_len", tbptt_len)
-    print("valid_dl", valid_dl)
-    print("test_dl", test_dl)
-    print("fast_eval", fast_eval)
-    print("adaptation", adaptation)
-    print("adaptation_lr", adaptation_lr)
+    # print("train one epoch parameters") 
+    # print("model", model)
+    # print("optimizer", optimizer)
+    # print("train_dl", train_dl)
+    # print("delta_coef", delta_coef)
+    # print("tbptt_len", tbptt_len)
+    # print("valid_dl", valid_dl)
+    # print("test_dl", test_dl)
+    # print("fast_eval", fast_eval)
+    # print("adaptation", adaptation)
+    # print("adaptation_lr", adaptation_lr)
 
     print("IN train_one_epoch Training...")
     last_xu, last_xi = model.get_init_states()
     #gets random tensor for the first time step
-    print("last_xu, last_xi", last_xu.shape, last_xi.shape)
-    print("last_xu, last_xi", last_xu, last_xi)
+    # print("last_xu, last_xi", last_xu.shape, last_xi.shape)
+    # print("last_xu, last_xi", last_xu, last_xi)
 
     loss_pp = 0.
     loss_norm = 0.
@@ -43,9 +43,9 @@ def train_one_epoch(model, optimizer, train_dl, delta_coef=1e-5, tbptt_len=20,
 
 
     counter = 0
-    print("counter", counter)
+    # print("counter", counter)
 
-    print(train_dl, "train_dl")
+    # print(train_dl, "train_dl")
     
 
     pbar = tqdm.tqdm(train_dl)
@@ -57,12 +57,12 @@ def train_one_epoch(model, optimizer, train_dl, delta_coef=1e-5, tbptt_len=20,
         
 
         print("i", i)
-        print("batch", batch)
+        # print("batch", batch)
 
-        t, dt, adj, i2u_adj, u2i_adj, users, items = batch
+        t, dt, adj, i2u_adj, u2i_adj, users, items, i2u_adj_low, i2u_adj_med, i2u_adj_high = batch
 
 
-        step_loss, delta_norm, last_xu, last_xi, *_ = model.propagate_update_loss(adj, dt, last_xu, last_xi, i2u_adj, u2i_adj, users, items)
+        step_loss, delta_norm, last_xu, last_xi, *_ = model.propagate_update_loss(adj, dt, last_xu, last_xi, i2u_adj, u2i_adj, users, items, i2u_adj_low, i2u_adj_med, i2u_adj_high)
         
         # print("step_loss", step_loss)
         # print("delta_norm", delta_norm)
@@ -77,10 +77,10 @@ def train_one_epoch(model, optimizer, train_dl, delta_coef=1e-5, tbptt_len=20,
 
         if (counter % tbptt_len) == 0 or i == (len(train_dl) - 1):
             total_loss = (loss_pp + loss_norm * delta_coef) / counter
-            print("total_loss", total_loss)
-            print("loss_pp", loss_pp)
-            print("loss_norm", loss_norm)
-            print("total_loss", type(total_loss))
+            # print("total_loss", total_loss)
+            # print("loss_pp", loss_pp)
+            # print("loss_norm", loss_norm)
+            # print("total_loss", type(total_loss))
 
             total_loss.backward()
             optimizer.step()
@@ -142,8 +142,8 @@ def rollout(dl, model, last_xu, last_xi):
 
     with torch.no_grad():
         for batch in tqdm.tqdm(dl, position=0):
-            t, dt, adj, i2u_adj, u2i_adj, users, items = batch
-            prop_user, prop_item, last_xu, last_xi = model.propagate_update(adj, dt, last_xu, last_xi, i2u_adj, u2i_adj)
+            t, dt, adj, i2u_adj, u2i_adj, users, items, i2u_adj_low, i2u_adj_med, i2u_adj_high = batch
+            prop_user, prop_item, last_xu, last_xi = model.propagate_update(adj, dt, last_xu, last_xi, i2u_adj, u2i_adj, i2u_adj_low, i2u_adj_med, i2u_adj_high)
 
 
 
@@ -174,24 +174,24 @@ def rollout(dl, model, last_xu, last_xi):
 
             neg_scores_list.append(torch.sigmoid(neg_scores).cpu().detach().numpy())
 
-            print("pos_scores, neg_scores", pos_scores.shape, neg_scores.shape)
-            print("pos_scores, neg_scores", pos_scores, neg_scores)
+            # print("pos_scores, neg_scores", pos_scores.shape, neg_scores.shape)
+            # print("pos_scores, neg_scores", pos_scores, neg_scores)
 
             
             rs = compute_rank(model, prop_user, prop_item, users, items)
 
             ranks.extend(rs)
-            print("ranks_rollout", ranks)
+            # print("ranks_rollout", ranks)
 
 
         pos_scores_list = np.concatenate(pos_scores_list, axis=None).ravel()
         neg_scores_list = np.concatenate(neg_scores_list, axis=None).ravel()
 
-        print("pos_scores_list", pos_scores_list)
-        print("neg_scores_list", neg_scores_list)
+        # print("pos_scores_list", pos_scores_list)
+        # print("neg_scores_list", neg_scores_list)
 
-        print("pos_scores_list", len(pos_scores_list))
-        print("neg_scores_list", len(neg_scores_list))
+        # print("pos_scores_list", len(pos_scores_list))
+        # print("neg_scores_list", len(neg_scores_list))
 
 
         pred_score = np.concatenate([pos_scores_list, neg_scores_list])

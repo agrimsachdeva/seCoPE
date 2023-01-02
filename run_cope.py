@@ -24,7 +24,7 @@ delta_coef = 0.
 
 
 def load(name):
-    if name in {'wikipedia_test2', 'wikipedia_test', 'wikipedia', 'lastfm', 'reddit'}:
+    if name in {'wikipedia_test2','cyverse', 'wikipedia_test', 'wikipedia', 'lastfm', 'reddit'}:
         df, feats = load_jodie_data(f'data/{name}.csv')
     else:
         df, feats = load_recommendation_data(f'data/{name}_5.csv')
@@ -44,10 +44,13 @@ if __name__ == '__main__':
     n_users, n_items = df.iloc[:, :2].max() + 1
 
     train_dl, valid_dl, test_dl = get_dataloaders(df, feats, device, ending_time, burnin_time, alpha)
+
+
+
     model = CoPE(n_users, n_items, hidden_size, n_neg_samples).to(device)
     optimizer = optim.Adam(model.parameters(), args.lr, weight_decay=args.weight_decay)
     
-    for epoch in range(2):
+    for epoch in range(20):
     # for epoch in range(20):
     # for epoch in range(50):
         print(f'Epoch {epoch}')

@@ -24,12 +24,35 @@ def biadjacency_to_laplacian(B):
 
 
 def biadjacency_to_propagation(B):
+
+    # print("IN biadjacency_to_propagation")
+    # print("B", B)
+    # print("B.shape", B.shape)
+
     d_item = np.array(B.sum(0)).squeeze()
     d_user = np.array(B.sum(1)).squeeze()
+
+    # print("d_item", d_item)
+    # print("d_item.shape", d_item.shape)
+    # print("d_user", d_user)
+    # print("d_user.shape", d_user.shape)
+
     invd_item = inverse_degree_array(d_item)
     invd_user = inverse_degree_array(d_user)
+
+    # print("invd_item", invd_item)
+    # print("invd_item.shape", invd_item.shape)
+    # print("invd_user", invd_user)
+    # print("invd_user.shape", invd_user.shape)
+
     B_i2u = sp.diags(invd_user) @ B
     B_u2i = sp.diags(invd_item) @ B.T
+
+    # print("B_i2u", B_i2u)
+    # print("B_i2u.shape", B_i2u.shape)
+    # print("B_u2i", B_u2i)
+    # print("B_u2i.shape", B_u2i.shape)
+
     return B_i2u, B_u2i
 
 

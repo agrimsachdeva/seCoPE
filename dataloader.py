@@ -53,12 +53,43 @@ class Dataloader:
             else:
                 B += delta_B
                 t, dt, _, delta_B, users, items, _feats = self.ds.getitem(i, True)
+
+
+            # print("features", _feats.shape)
+            # print("features type", type(_feats))
+            # print("features", _feats)
+            # print("features1", _feats[0])
+            # print("features2", _feats[0][-1])
+            # print("features3", _feats[0][-2])
+            # print("features4", _feats[0][-3])
+            # print("features2", _feats[1])
+
             adj = biadjacency_to_laplacian(B) * self.alpha
             i2u_adj, u2i_adj = biadjacency_to_propagation(delta_B)
+
+            # add logic based on features
+
             adj, i2u_adj, u2i_adj = [sparse_mx_to_torch_sparse_tensor(v).to(self.device) for v in [adj, i2u_adj, u2i_adj]]
+
+            i2u_adj_low = i2u_adj * _feats[0][-3]
+            i2u_adj_med = i2u_adj * _feats[0][-2]
+            i2u_adj_high = i2u_adj * _feats[0][-1]
+
+            # print("i2u_adj_low", i2u_adj_low)
+            # print("i2u_adj_med", i2u_adj_med)
+            # print("i2u_adj_high", i2u_adj_high)
+
+            # print("ITERATION")
+            # print("i", i, "t", t, "dt", dt, "#Users", len(users), "#Items", len(items))
+            # print("adj", adj.shape, "i2u_adj", i2u_adj.shape, "u2i_adj", u2i_adj.shape)
+
+            # print("adj", adj, "\ni2u_adj", i2u_adj, "\nu2i_adj", u2i_adj)
+            
+
             users = torch.from_numpy(users).long().to(self.device)
             items = torch.from_numpy(items).long().to(self.device)
-            yield t, dt, adj, i2u_adj, u2i_adj, users, items
+            
+            yield t, dt, adj, i2u_adj, u2i_adj, users, items, i2u_adj_low, i2u_adj_med, i2u_adj_high
 
 
 class Dataset:

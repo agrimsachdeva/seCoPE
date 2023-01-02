@@ -104,7 +104,7 @@ class ACGNN(nn.Module):
             # can we have a 2d matrix for alpha?
             # static 2d can be updated once we know what to calculate from the pairwise attention
 
-        print("IN ACGNN forward") 
+        # print("IN ACGNN forward") 
         d = last_state.size(1)
         if self.learnable_alpha:
 
