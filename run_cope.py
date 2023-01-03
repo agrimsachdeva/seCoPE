@@ -11,6 +11,7 @@ from eval_utils import *
 from trainer import *
 from cope import CoPE
 
+import networkx as nx
 
 ending_time = 1.
 burnin_time = 0.0
@@ -43,11 +44,47 @@ if __name__ == '__main__':
     df, feats = load(args.dataset)
     n_users, n_items = df.iloc[:, :2].max() + 1
 
+    print("n_users: ", n_users)
+    print("n_items: ", n_items)
+    print("df: ", df)
+
+    G = nx.Graph()
+
+    df.head()
+
+    df_temp = df.copy()
+
+    df_temp['item_id'] = df_temp['item_id'] + n_users
+
+    print("HERE")
+
+    G = nx.from_pandas_edgelist(df_temp, 'item_id', 'user_id')
+    print("G: ", G)
+    centrality = nx.eigenvector_centrality(G)
+    centrality = np.fromiter(centrality.values(), dtype=float)
+
+    # temp_df = df[['user_id', 'item_id', 'timestamp']]
+    # temp_df.rename({'user_id': 'i', 'item_id': 'j', 'timestamp' : 't'}, axis=1, inplace=True)
+    # tnet = TemporalNetwork(from_df = temp_df)
+    # centrality = temporal_closeness_centrality(tnet = tnet)
+    # attn = pd.DataFrame(centrality)
+    print("centrality: ", centrality.max())
+    # print("centrality: ", len(centrality))
+    # print("centrality: ", type(centrality))
+
+    n_nodes = n_users + n_items
+
+    # attn = torch.ones(n_nodes) * 3
+    attn = torch.from_numpy(centrality).float()
+    print("attn2: ", attn)
+    # print("attn2: ", len(attn))
+    # print("attn2: ", type(attn))
+
+    df.head()
+    df_temp.head()
+    
     train_dl, valid_dl, test_dl = get_dataloaders(df, feats, device, ending_time, burnin_time, alpha)
-
-
-
-    model = CoPE(n_users, n_items, hidden_size, n_neg_samples).to(device)
+    model = CoPE(n_users, n_items, hidden_size, attn, n_neg_samples).to(device)
     optimizer = optim.Adam(model.parameters(), args.lr, weight_decay=args.weight_decay)
     
     for epoch in range(20):
@@ -57,4 +94,3 @@ if __name__ == '__main__':
         print("Entering epoch")
         train_one_epoch(model, optimizer, train_dl, delta_coef, tbptt_len, valid_dl, test_dl, False)
         print("Finished epoch")
-

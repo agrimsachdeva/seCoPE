@@ -7,7 +7,7 @@ from acgnn import ACGNN
 
 class CoPE(nn.Module):
     
-    def __init__(self, n_users, n_items, hidden_size, n_neg_samples=16):
+    def __init__(self, n_users, n_items, hidden_size, attn, n_neg_samples=16):
         super().__init__()
         self.n_users = n_users
         self.n_items = n_items
@@ -17,7 +17,7 @@ class CoPE(nn.Module):
         self.item_states = nn.Parameter(torch.rand(n_items, hidden_size))
         trunc_normal_(self.user_states.data, std=0.01)
         trunc_normal_(self.item_states.data, std=0.01)
-        self.propagate_unit = PropagateUnit(n_users, n_items)
+        self.propagate_unit = PropagateUnit(n_users, n_items, attn)
         self.update_unit = UpdateUnit(hidden_size)
         self.u_pred_mapping = nn.Linear(2 * hidden_size, 2 * hidden_size)
         self.i_pred_mapping = nn.Linear(2 * hidden_size, 2 * hidden_size)
@@ -95,11 +95,12 @@ class CoPE(nn.Module):
 
 class PropagateUnit(nn.Module):
     
-    def __init__(self, n_users, n_items):
+    def __init__(self, n_users, n_items, attn):
         super().__init__()
         self.n_users = n_users
         self.n_items = n_items
-        self.gnn = ACGNN(10, 2, self.n_users + self.n_items, True)
+        self.gnn = ACGNN(10, 2, self.n_users + self.n_items, attn, True)
+        self.attn = attn
     
     def forward(self, adj, dt, xu, xi, static_u, static_i):
         print('in propagate unit FORWARD')

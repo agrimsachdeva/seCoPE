@@ -74,15 +74,17 @@ class ExpNet(nn.Module):
     
 class ACGNN(nn.Module):
     
-    def __init__(self, inv_order, exp_order, n_nodes, learnable_alpha=False):
+    def __init__(self, inv_order, exp_order, n_nodes, attn, learnable_alpha=False):
         super().__init__()
         self.inv_net = InvNet(inv_order)
         self.exp_net = ExpNet(exp_order)
         self.n_nodes = n_nodes
         self.learnable_alpha = learnable_alpha
+
         if learnable_alpha:
             # initilization of alpha 
-            self.alpha = nn.Parameter(torch.ones(n_nodes) * 3)
+            self.alpha = nn.Parameter(attn)
+            # self.alpha = nn.Parameter(torch.ones(n_nodes) * 3)
             # change to 2d matrix
             # self.alpha = nn.Parameter(torch.ones(n_nodes, 32) * 3)
         else:

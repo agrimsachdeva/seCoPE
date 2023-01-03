@@ -1,0 +1,915 @@
+1301
+1302
+#Users: 1302, #Items: 50, #Interactions: 9824, #Timestamps: 9800
+Records Split: (7859, 982, 983)
+Timestamps Split: (7837, 980, 983)
+Epoch 0
+Entering epoch
+IN train_one_epoch Training...
+i 0
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 1
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 2
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 3
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 4
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 5
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 6
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 7
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 8
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 9
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 10
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 11
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 12
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 13
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 14
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 15
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 16
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 17
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 18
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 19
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 20
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 21
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 22
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 23
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 24
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 25
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 26
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 27
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 28
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 29
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 30
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 31
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 32
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 33
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 34
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 35
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 36
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 37
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 38
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 39
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 40
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 41
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 42
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 43
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 44
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 45
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 46
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 47
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 48
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 49
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 50
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 51
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 52
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 53
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 54
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 55
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 56
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 57
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 58
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 59
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 60
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 61
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 62
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 63
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 64
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 65
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 66
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 67
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 68
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 69
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 70
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 71
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 72
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 73
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 74
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 75
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 76
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 77
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 78
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 79
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 80
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 81
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 82
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 83
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 84
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 85
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 86
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 87
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 88
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 89
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 90
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 91
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 92
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 93
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 94
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 95
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 96
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 97
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 98
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 99
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 100
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 101
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 102
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 103
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 104
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 105
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 106
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 107
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 108
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 109
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 110
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 111
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 112
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 113
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 114
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 115
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 116
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 117
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 118
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 119
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 120
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 121
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 122
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 123
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 124
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 125
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 126
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 127
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 128
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 129
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 130
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 131
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 132
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 133
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 134
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 135
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 136
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 137
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 138
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 139
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 140
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 141
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 142
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 143
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 144
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 145
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 146
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 147
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 148
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 149
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 150
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 151
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 152
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 153
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 154
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 155
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 156
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 157
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 158
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 159
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 160
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 161
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 162
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 163
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 164
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 165
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 166
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 167
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 168
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 169
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 170
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 171
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 172
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 173
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 174
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 175
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 176
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 177
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 178
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 179
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 180
+in propagate unit FORWARD
+yu torch.Size([1302, 32])
+yi torch.Size([50, 32])
+out propagate unit FORWARD
+i 181
+in propagate unit FORWARD
